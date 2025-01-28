@@ -45,6 +45,27 @@ public class Ejercicios_Resueltos_Cadenas_de_Caracteres {
         
         
         
+        
+        System.out.println("\nOtra opción para hacerlo: Si el nombre es valido. (Entre 1 y 10), interesaría nombrar la \n" +
+        "variable booleana al contrario: nombreValido.");
+        
+        boolean nombreValido = true;
+        String nombre1;
+        
+        do {
+            System.out.print("Introduce un nombre válido: (Entre 1 y 10 caracteres)\n");
+            nombre1 = teclado.nextLine();
+            
+            //Comprobamos los requisitos
+            nombreValido = nombre1.length()>=1 && nombre1.length()<=10;
+            if (!nombreValido) {
+                System.out.println("El nombre debe tener entre 1 y 10 caracteres");
+            }
+        } while (!nombreValido); //Seguimos solicitando mientras no sea válido
+        
+        System.out.println("El nombre introducido es: " + nombre1);
+        
+        System.out.println("La longitud del nombre introducido es: " + nombre1.length() + " caracteres");
     }
     
 }
