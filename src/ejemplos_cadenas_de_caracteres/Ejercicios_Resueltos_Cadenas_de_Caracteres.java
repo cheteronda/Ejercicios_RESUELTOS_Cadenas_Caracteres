@@ -62,7 +62,10 @@ Scanner teclado = new Scanner (System.in);
             nombre = teclado.nextLine();
             
             //almacenamos en la variable nombreValido estas condiciones. Entre 1 y 10 caracteres. Empieze por mayúscula y el resto minúscula
-            nombreValido = nombre.length()>=1 && nombre.length()<=10 && nombre.charAt(0)>= 'A' && nombre.charAt(0)<= 'Z';
+//            nombreValido = nombre.length()>=1 && nombre.length()<=10 && nombre.charAt(0)>= 'A' && nombre.charAt(0)<= 'Z';
+            
+            //Otra forma de comprobación más completa
+            nombreValido = nombre.length()>=1 && nombre.length()<=10 && Character.isUpperCase(nombre.charAt(0));
             
             if (!nombreValido) { //Si el nombreValido pasa a False. Avisamos el error.
                 System.out.println("El nombre debe tener como mínimo un carácter y como máximo 10. Debe comenzar por letra mayúscula y el resto de letras deben ser minúsculas.");
