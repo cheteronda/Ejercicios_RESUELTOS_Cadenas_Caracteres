@@ -35,6 +35,7 @@ public class Ejemplos_Cadenas_de_Caracteres {
         System.out.println(cadena);
         
         System.out.println(4+1 + "-" + 4+1);
+        System.out.println("Resultado: 5-41");
         
         
         //Según esta cadena, para saber la longitud de la cadena, usamos el método length, 
